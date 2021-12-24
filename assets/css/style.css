@@ -207,12 +207,34 @@ body.gray {
   padding-right: 25px;
   z-index: 1;
 }
+@media only screen and (min-width: 768px) {
+  .section__title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #95989a;
+  }
+}
 
 .sponsors {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 86px;
   gap: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .sponsors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .sponsors {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 .sponsors figure {
   display: grid;
@@ -247,6 +269,20 @@ body.gray {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .news-cards-grid {
+    grid-template-columns: repeat(2, 376px);
+    justify-content: center;
+    column-gap: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .news-cards-grid {
+    grid-template-columns: repeat(3, 376px);
+    column-gap: unset;
+    justify-content: space-between;
+  }
 }
 
 .league-table {
@@ -302,6 +338,12 @@ body.gray {
   justify-content: center;
   gap: 24px;
 }
+@media only screen and (min-width: 992px) {
+  .leagues {
+    margin-inline: auto;
+    max-width: 973px;
+  }
+}
 .leagues li {
   background-color: var(--clr-secondary);
   border-radius: 5px;
@@ -331,6 +373,18 @@ body.gray {
   .hero .hero-slider {
     max-width: 796px;
     margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .slick-slide {
+    margin-inline: 9px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .slick-list {
+    margin-inline: -9px;
   }
 }
 
@@ -500,6 +554,12 @@ body.gray {
   flex-direction: column;
   gap: 20px;
 }
+@media only screen and (min-width: 768px) {
+  .site-footer__nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .site-footer__nav a {
   font-family: var(--ff-body);
   font-size: 14px;
@@ -517,6 +577,13 @@ body.gray {
   flex-direction: column;
   gap: 20px;
 }
+@media only screen and (min-width: 768px) {
+  .site-footer__wrapper .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .site-footer__logo img {
   max-width: 232px;
   height: auto;
@@ -529,6 +596,11 @@ body.gray {
   gap: 8px;
   font-size: 14px;
   color: var(--clr-neutral-100);
+}
+@media only screen and (min-width: 768px) {
+  .site-footer__disclaimer {
+    align-items: flex-end;
+  }
 }
 .site-footer__disclaimer a {
   color: inherit;
@@ -798,6 +870,9 @@ body.gray {
   background-color: var(--clr-primary);
 }
 
+.matches {
+  margin-bottom: 30px;
+}
 .matches__list {
   display: flex;
   flex-direction: column;
@@ -805,12 +880,20 @@ body.gray {
 }
 
 .match {
+  position: relative;
   padding-block: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   background-color: var(--clr-neutral-100);
+}
+@media only screen and (min-width: 992px) {
+  .match {
+    flex-direction: row;
+    justify-content: center;
+    padding-inline: 20px;
+  }
 }
 .match .team {
   display: flex;
@@ -843,6 +926,15 @@ body.gray {
 .match__info {
   text-align: center;
 }
+@media only screen and (min-width: 992px) {
+  .match__info {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 .match__info p {
   font-size: 14px;
   font-weight: 300;
@@ -854,6 +946,12 @@ body.gray {
   grid-template-columns: repeat(auto-fill, 280px);
   column-gap: 14px;
   row-gap: 18px;
+}
+@media only screen and (min-width: 1200px) {
+  .clubs-list {
+    justify-content: space-between;
+    column-gap: unset;
+  }
 }
 .clubs-list a {
   position: relative;

@@ -1,4 +1,6 @@
 .matches {
+  margin-bottom: 30px;
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -7,6 +9,7 @@
 }
 
 .match {
+  position: relative;
   padding-block: 6px;
   display: flex;
   flex-direction: column;
@@ -14,6 +17,13 @@
   gap: 10px;
 
   background-color: var(--clr-neutral-100);
+
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+    justify-content: center;
+    padding-inline: 20px;
+  }
+
   .team {
     display: flex;
     align-items: center;
@@ -49,6 +59,14 @@
 
   &__info {
     text-align: center;
+
+    @media only screen and (min-width: 992px) {
+      text-align: right;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     p {
       font-size: 14px;
