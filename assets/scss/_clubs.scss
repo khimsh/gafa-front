@@ -42,8 +42,13 @@
   &__hero {
     @media only screen and (min-width: 1200px) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 560px 1fr;
       column-gap: 37px;
+    }
+
+    figure {
+      margin-top: 30px;
+      width: 100%;
     }
   }
 }

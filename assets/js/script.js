@@ -33,3 +33,13 @@ if (document.querySelector('[data-dropdown]')) {
     });
   });
 }
+
+if (document.querySelector('.choose-league')) {
+  const dropdown = document.querySelector('.choose-league');
+
+  const trigger = dropdown.querySelector('[data-dropdown-trigger]');
+
+  trigger.addEventListener('click', () => {
+    dropdown.classList.toggle('open');
+  });
+}
