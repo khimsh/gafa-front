@@ -116,6 +116,11 @@
     font-family: var(--ff-body);
     font-size: 21px;
     color: var(--clr-neutral-100);
+    transition: color 0.15s ease-in-out;
+
+    &.active {
+      color: var(--clr-accent);
+    }
 
     &:hover,
     &:active,

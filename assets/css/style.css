@@ -766,6 +766,10 @@ main {
   font-family: var(--ff-body);
   font-size: 21px;
   color: var(--clr-neutral-100);
+  transition: color 0.15s ease-in-out;
+}
+.link-with-bg a.active {
+  color: var(--clr-accent);
 }
 .link-with-bg a:hover, .link-with-bg a:active, .link-with-bg a:focus {
   color: var(--clr-accent);
