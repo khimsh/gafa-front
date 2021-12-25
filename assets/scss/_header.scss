@@ -135,6 +135,12 @@
   z-index: 10;
   transition: max-height 0.2s ease-in-out;
 
+  @media only screen and (min-width: 992px) {
+    width: 40%;
+    left: unset;
+    right: 0;
+  }
+
   &.active {
     max-height: 1000px;
   }

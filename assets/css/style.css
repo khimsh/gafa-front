@@ -564,6 +564,13 @@ main {
   z-index: 10;
   transition: max-height 0.2s ease-in-out;
 }
+@media only screen and (min-width: 992px) {
+  .header-search-box {
+    width: 40%;
+    left: unset;
+    right: 0;
+  }
+}
 .header-search-box.active {
   max-height: 1000px;
 }
@@ -881,7 +888,6 @@ main {
   border-radius: 3px 3px 0 0;
 }
 .table--lg tbody td {
-  font-size: 22px !important;
   text-align: center;
 }
 .table--lg tbody td:nth-child(2) {
@@ -962,7 +968,7 @@ main {
   background-color: var(--clr-primary);
 }
 
-.matches {
+.matches:not(:last-of-type) {
   margin-bottom: 30px;
 }
 .matches__list {

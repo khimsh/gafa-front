@@ -1,5 +1,7 @@
 .matches {
-  margin-bottom: 30px;
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
 
   &__list {
     display: flex;
