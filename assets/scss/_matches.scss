@@ -6,6 +6,13 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  & > time {
+    margin-bottom: 14px;
+    display: block;
+    font-size: 17px;
+    text-align: right;
+  }
 }
 
 .match {

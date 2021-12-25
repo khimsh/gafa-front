@@ -1,0 +1,51 @@
+.choose-season {
+  position: relative;
+  max-width: 240px;
+  margin-left: auto;
+  padding: 20px;
+  margin-bottom: -20px;
+
+  &.open {
+    border-radius: 5px 5px 0 0;
+    background-color: var(--clr-neutral-100);
+
+    .choose-season__content {
+      display: block;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    span {
+      font-family: var(--ff-heading);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--clr-neutral-900);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 20;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--clr-neutral-100);
+    font-family: var(--ff-heading);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--clr-neutral-900);
+    border-radius: 0 0 5px 5px;
+
+    display: none;
+
+    li {
+      padding: 8px 0;
+      cursor: pointer;
+    }
+  }
+}

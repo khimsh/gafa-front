@@ -19,3 +19,17 @@ searchBoxControl.addEventListener('click', () => {
 
   searchBox.classList.toggle('active');
 });
+
+// dropdowns
+if (document.querySelector('[data-dropdown]')) {
+  const dropdowns = document.querySelectorAll('[data-dropdown]');
+
+  dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector('[data-dropdown-trigger]');
+
+    trigger.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+      // console.log(dropdown);
+    });
+  });
+}
