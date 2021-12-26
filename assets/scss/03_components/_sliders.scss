@@ -1,0 +1,50 @@
+@use '../02_base/vars' as v;
+
+// სლაიდერები
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-neutral-700);
+  border-radius: 35px;
+  z-index: 10;
+
+  &.slick-next {
+    right: 0;
+  }
+
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: var(--clr-neutral-100);
+  }
+}
+
+.slick-slide {
+  @media only screen and (min-width: v.$mq-sm) {
+    margin-inline: 9px;
+  }
+}
+
+.slick-list {
+  @media only screen and (min-width: v.$mq-sm) {
+    margin-inline: -9px;
+  }
+}
+
+.hero-slider {
+  @media only screen and (min-width: v.$mq-md) {
+    max-width: 700px;
+    margin-left: 15px;
+  }
+
+  @media only screen and (min-width: v.$mq-lg) {
+    max-width: 796px;
+    margin-left: 0;
+  }
+}

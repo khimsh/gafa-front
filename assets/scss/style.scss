@@ -1,14 +1,21 @@
-@use './slick';
-@use './fonts';
-@use './vars';
-@use './base';
-@use './header';
-@use './footer';
-@use './menus';
-@use './cards';
-@use './schedule';
-@use './tables';
-@use './matches';
-@use './clubs';
-@use './leaders';
-@use './dropdowns';
+@use '01_vendors/slick';
+
+@use '02_base/fonts';
+@use '02_base/vars';
+@use '02_base/base';
+
+@use './03_components/buttons';
+@use './03_components/cards';
+@use './03_components/dropdowns';
+@use './03_components/footer';
+@use './03_components/header';
+@use './03_components/leaders';
+@use './03_components/matches';
+@use './03_components/menus';
+@use './03_components/schedule';
+@use './03_components/sponsors';
+@use './03_components/sliders';
+@use './03_components/tables';
+
+@use './04_pages/clubs';
+@use './04_pages/sections';
