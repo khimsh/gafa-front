@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Slider */
 .slick-slider {
   position: relative;
@@ -291,6 +292,23 @@ main {
   .hero .container {
     display: flex;
   }
+}
+
+.live {
+  position: relative;
+}
+.live::after {
+  content: "•Live";
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px 4px 2px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-red-900);
+  border-radius: 3px;
 }
 
 .btn-primary {
