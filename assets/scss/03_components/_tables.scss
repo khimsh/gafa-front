@@ -165,3 +165,145 @@
     background-color: var(--clr-primary);
   }
 }
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+
+  background-color: var(--clr-neutral-100);
+  padding-bottom: 30px;
+  border-radius: 3px;
+
+  &--sm {
+    padding-bottom: 0;
+  }
+}
+
+.league-tb {
+  width: 100%;
+  border-collapse: collapse;
+
+  &--sm {
+    tbody {
+      tr:nth-child(1) {
+        display: none;
+      }
+    }
+    .tb-team {
+      span {
+        font-size: 16px !important;
+      }
+    }
+    .tb-cell {
+      font-size: 16px !important;
+    }
+  }
+
+  thead {
+    background-color: #f4f5f6;
+
+    th {
+      padding-bottom: 20px;
+      font-size: 16px;
+      font-weight: 300;
+      color: #686767;
+    }
+  }
+
+  tbody {
+    tr {
+      margin-block: 5px;
+      height: 40px;
+
+      &:hover {
+        background-color: hsl(0 0% 38% / 0.11);
+      }
+
+      &:nth-child(1) {
+        height: 30px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        .tb-pos {
+          div {
+            color: var(--clr-neutral-100);
+            background-color: var(--clr-green-500);
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        .tb-pos {
+          div {
+            color: var(--clr-neutral-100);
+            background-color: var(--clr-green-200);
+          }
+        }
+      }
+
+      &:nth-child(18),
+      &:nth-child(19),
+      &:nth-child(20),
+      &:nth-child(21) {
+        .tb-pos {
+          div {
+            color: var(--clr-neutral-100);
+            background-color: var(--clr-red-900);
+          }
+        }
+      }
+    }
+  }
+
+  .tb-pos {
+    width: 30px;
+    padding-left: 30px;
+    padding-right: 17px;
+
+    div {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-content: center;
+      font-size: 14px;
+      font-weight: 300;
+      color: #171515;
+      background-color: #aaa4a4;
+    }
+  }
+
+  .tb-team {
+    padding-right: 50px;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
+
+      span {
+        font-size: 22px;
+        font-weight: 400;
+        color: #686767;
+      }
+    }
+  }
+
+  .tb-cell {
+    width: 70px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .tb-bold {
+    font-weight: 700;
+  }
+}
