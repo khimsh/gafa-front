@@ -34,21 +34,22 @@
       padding-block: 5px;
       font-family: var(--ff-body);
       font-size: 16px;
-      color: var(--clr-neutral-100);
+      color: var(--clr-neutral-800);
       text-align: center;
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        max-width: 700px;
-        background-color: var(--clr-primary);
-        z-index: -1;
+      @media only screen and (min-width: 992px) {
+        color: var(--clr-neutral-100);
 
-        @media only screen and (min-width: 992px) {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          max-width: 700px;
+          background-color: var(--clr-primary);
+          z-index: -1;
           clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
         }
       }

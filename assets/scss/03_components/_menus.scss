@@ -61,11 +61,6 @@
 
 .secondary-nav {
   margin-block: 20px;
-  margin-inline: 15px;
-
-  @media only screen and (min-width: 992px) {
-    margin-inline: 0;
-  }
 
   ul {
     display: grid;
@@ -89,7 +84,6 @@
 .link-with-bg {
   display: grid;
   place-content: center;
-  max-width: 227px;
   padding: 1em;
 
   background-repeat: no-repeat;
