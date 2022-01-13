@@ -1,0 +1,114 @@
+.article {
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--clr-neutral-900);
+  }
+
+  &__social {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+
+    a {
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      background-color: #b5b2b2;
+      border-radius: 24px;
+      transition: background-color 150ms ease-in-out;
+
+      &:hover {
+        background-color: var(--clr-neutral-700);
+      }
+    }
+
+    svg {
+      color: var(--clr-neutral-100);
+    }
+  }
+
+  &__image {
+    margin-bottom: 24px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    time {
+      position: absolute;
+      right: 22px;
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      span {
+        font-family: var(--ff-body);
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--clr-neutral-100);
+      }
+
+      svg {
+        display: block;
+        fill: var(--clr-neutral-100);
+      }
+    }
+  }
+
+  .texts {
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  &__footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e8e7e7;
+
+    p,
+    span {
+      font-size: 17px;
+      font-weight: 300;
+      color: #b5b2b2;
+    }
+  }
+
+  &__views {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      display: block;
+      fill: #b5b2b2;
+    }
+  }
+}
+
+.news-wrapper {
+  margin-bottom: 72px;
+  display: flex;
+  gap: 28px;
+
+  @media only screen and (max-width: 992px) {
+    .league-table {
+      display: none;
+    }
+  }
+}

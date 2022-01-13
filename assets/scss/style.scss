@@ -1,9 +1,12 @@
 @use '01_vendors/slick';
+@use '01_vendors/modal';
 
 @use '02_base/fonts';
 @use '02_base/vars';
 @use '02_base/base';
+@use '02_base/utilities';
 
+@use './03_components/article';
 @use './03_components/buttons';
 @use './03_components/cards';
 @use './03_components/contact';
@@ -17,6 +20,7 @@
 @use './03_components/sponsors';
 @use './03_components/sliders';
 @use './03_components/tables';
+@use './03_components/yt-player';
 
 @use './04_pages/clubs';
 @use './04_pages/sections';

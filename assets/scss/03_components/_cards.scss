@@ -1,4 +1,9 @@
-.news-card {
+.card {
+  &--media {
+    cursor: pointer;
+  }
+
+  &--media,
   a {
     display: flex;
     flex-direction: column;

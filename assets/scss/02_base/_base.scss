@@ -93,21 +93,15 @@ main {
 }
 
 // ქარდების გრიდი
-.news-cards-grid {
+.cards-grid {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 40px;
 
   @media only screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, 376px);
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     justify-content: center;
-    column-gap: 40px;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    grid-template-columns: repeat(3, 376px);
-    column-gap: unset;
-    justify-content: space-between;
+    column-gap: 18px;
   }
 }
 

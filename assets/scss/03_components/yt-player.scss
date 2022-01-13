@@ -1,0 +1,23 @@
+.yt-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  &.active {
+    display: grid;
+    place-content: center;
+  }
+
+  .backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: hsl(0 0% 100% / 0.4);
+  }
+
+  iframe {
+    position: relative;
+    z-index: 1001;
+  }
+}
