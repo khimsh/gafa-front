@@ -66,6 +66,11 @@
 
     a {
       color: inherit;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        color: var(--clr-primary);
+      }
     }
   }
 

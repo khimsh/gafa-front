@@ -54,7 +54,7 @@ main {
   max-width: 1160px;
   margin: 0 auto;
 
-  padding-inline: 20px;
+  padding-inline: 15px;
 
   @media only screen and (min-width: 1200px) {
     padding: 0;
@@ -65,10 +65,13 @@ main {
   margin-bottom: 15px;
   position: relative;
   font-family: var(--ff-heading);
-  // TODO: დიდ ეკრანზე font-size: 24px;
   font-size: 20px;
   font-weight: 400;
   color: var(--clr-neutral-900);
+
+  @media only screen and (min-width: 1366px) {
+    font-size: 24px;
+  }
 
   span {
     position: relative;
@@ -171,50 +174,6 @@ main {
     color: var(--clr-neutral-100);
     background-color: var(--clr-red-900);
     border-radius: 3px;
-  }
-}
-
-.breadcrumbs {
-  padding-block: 14px;
-  background-color: #e6e6e6;
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__title {
-    font-family: var(--ff-heading);
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--clr-secondary);
-  }
-
-  ul {
-    display: flex;
-    align-items: center;
-  }
-
-  a {
-    font-size: 14px;
-    color: var(--clr-main);
-
-    &.active {
-      position: relative;
-      color: #62c3a4;
-      padding-left: 10px;
-      margin-left: 14px;
-
-      &::before {
-        content: '/';
-        position: absolute;
-        left: -5px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #62c3a4;
-      }
-    }
   }
 }
 
