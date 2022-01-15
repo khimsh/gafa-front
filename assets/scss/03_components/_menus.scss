@@ -46,13 +46,37 @@
     display: block;
     padding-block: 10px;
     text-align: center;
+    position: relative;
+
+    @media only screen and (min-width: 1200px) {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        background-color: var(--clr-primary);
+        transition: all .2s ease-in-out;
+      }
+
+      &:hover,
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
 .social-links {
   display: flex;
-  // TODO: დიდ ეკრანზე gap: 12px;
   gap: 20px;
+
+  @media only screen and (min-width: 1366px) {
+    gap: 12px;
+  }
 
   svg {
     display: block;

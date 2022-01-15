@@ -1308,11 +1308,32 @@ main {
   display: block;
   padding-block: 10px;
   text-align: center;
+  position: relative;
+}
+@media only screen and (min-width: 1200px) {
+  .site-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: var(--clr-primary);
+    transition: all 0.2s ease-in-out;
+  }
+  .site-nav a:hover::after, .site-nav a.active::after {
+    width: 100%;
+  }
 }
 
 .social-links {
   display: flex;
   gap: 20px;
+}
+@media only screen and (min-width: 1366px) {
+  .social-links {
+    gap: 12px;
+  }
 }
 .social-links svg {
   display: block;
