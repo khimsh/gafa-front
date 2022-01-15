@@ -59,10 +59,10 @@
               <div>
                 <li><a href="index.html">მთავარი</a></li>
                 <li><a href="about.html">ლიგის შესახებ</a></li>
-                <li><a href="news.html" class="active">სიახლეები</a></li>
+                <li><a href="news.html">სიახლეები</a></li>
               </div>
               <div>
-                <li><a href="media.html">მედია</a></li>
+                <li><a href="media.html" class="active">მედია</a></li>
                 <li><a href="#">Hall Of Fame</a></li>
                 <li><a href="contact.html">კონტაქტი</a></li>
               </div>
@@ -74,22 +74,23 @@
           </a>
 
           <button class="nav-control-btn">
-            <svg width="14" height="14">
+            <svg>
               <use href="assets/images/icons/menu.svg#menu" />
             </svg>
           </button>
 
           <button class="search-control-btn">
-            <svg width="14" height="14">
+            <svg>
               <use href="assets/images/icons/search.svg#search" />
             </svg>
           </button>
 
           <div class="header-search-box">
             <form action="#">
-              <input type="search" name="" id="" />
+              <input type="search" name="search" id="search" placeholder="ძიება" />
+
               <button type="submit">
-                <svg width="14" height="14">
+                <svg>
                   <use href="assets/images/icons/search.svg#search" />
                 </svg>
               </button>
@@ -212,12 +213,12 @@
     <footer class="site-footer">
       <nav class="site-footer__nav">
         <ul>
-          <li><a href="#">შედეგები </a></li>
-          <li><a href="#">ცხრილები </a></li>
+          <li><a href="results.html">შედეგები </a></li>
+          <li><a href="tables.html">ცხრილები </a></li>
           <li><a href="#">სტატისტიკა </a></li>
-          <li><a href="#">კალენდარი </a></li>
-          <li><a href="#">კლუბები </a></li>
-          <li><a href="#">დოკუმენტები </a></li>
+          <li><a href="calendar.html">კალენდარი </a></li>
+          <li><a href="clubs.html">კლუბები </a></li>
+          <li><a href="documents.html">დოკუმენტები </a></li>
           <li><a href="#">ვიდეო </a></li>
         </ul>
       </nav>
@@ -459,20 +460,6 @@
           </svg>
         </button>
       </div>
-    </div>
-
-    <!-- yt მოდალი -->
-    <div class="yt-popup">
-      <div class="backdrop"></div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/BOyD-S-yjVM"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
     </div>
   </body>
 </html>

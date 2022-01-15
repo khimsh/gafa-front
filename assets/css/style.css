@@ -1064,29 +1064,22 @@ main {
   overflow: hidden;
   position: absolute;
   top: 57px;
-  left: 0;
-  width: 100%;
-  background-color: var(--clr-secondary);
+  right: 0;
+  width: 300px;
+  background-color: #4086bb;
+  border-radius: 0 0 3px 3px;
   z-index: 10;
   transition: max-height 0.2s ease-in-out;
-}
-@media only screen and (min-width: 1200px) {
-  .header-search-box {
-    width: 40%;
-    left: unset;
-    right: 0;
-  }
 }
 .header-search-box.active {
   max-height: 1000px;
 }
 .header-search-box form {
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding-block: 30px;
-  padding-inline: 15px;
 }
 .header-search-box input {
   flex-grow: 1;
@@ -1094,7 +1087,7 @@ main {
   font-size: 16px;
   color: var(--clr-neutral-800);
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 10px;
 }
 .header-search-box button svg {
