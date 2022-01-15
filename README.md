@@ -10,3 +10,6 @@
 7. https://khimsh.github.io/gafa-front/contact.html
 8. https://khimsh.github.io/gafa-front/about.html
 9. https://khimsh.github.io/gafa-front/documents.html
+10. https://khimsh.github.io/gafa-front/news.html
+11. https://khimsh.github.io/gafa-front/news-inner.html
+12. https://khimsh.github.io/gafa-front/media.html
