@@ -11,13 +11,14 @@ navControl.addEventListener('click', () => {
 
 const searchBoxControl = document.querySelector('.search-control-btn');
 const searchBox = document.querySelector('.header-search-box');
+const searchBoxClose = document.querySelector('.header-search-box__close');
 
 searchBoxControl.addEventListener('click', () => {
-  if (navigation.classList.contains('active')) {
-    navigation.classList.remove('active');
-  }
+  searchBox.classList.add('active');
+});
 
-  searchBox.classList.toggle('active');
+searchBoxClose.addEventListener('click', () => {
+  searchBox.classList.remove('active');
 });
 
 // dropdowns
@@ -160,11 +161,3 @@ if (document.querySelector('.photo-gallery-modal')) {
     return image;
   }
 }
-
-// youtube popup
-const ytModal = document.querySelector('.yt-popup');
-const ytBg = ytModal.querySelector('.backdrop');
-
-ytBg.addEventListener('click', () => {
-  ytModal.classList.remove('active');
-});

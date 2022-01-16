@@ -124,25 +124,31 @@
 }
 
 .header-search-box {
-  max-height: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) scaleX(0);
   overflow: hidden;
 
-  position: absolute;
-  top: 57px;
-  right: 0;
-  
-  width: 300px;
-  background-color: #4086bb;
+  height: 100%;
+  width: 100%;
+  padding-inline: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--clr-primary);
   border-radius: 0 0 3px 3px;
   z-index: 10;
-  transition: max-height 0.2s ease-in-out;
-  
+  transition: transform 0.2s ease-in-out;
+  transform-origin: right;
+  z-index: 1000;
+
   &.active {
-    max-height: 1000px;
+    transform: translateY(-50%) scaleX(1);
   }
-  
+
   form {
-    padding: 15px;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +161,7 @@
     font-size: 16px;
     color: var(--clr-neutral-800);
     border: none;
-    border-radius: 2px;
+    border-radius: 30px;
     padding: 10px;
   }
 
@@ -163,7 +169,7 @@
     svg {
       width: 24px;
       height: 24px;
-      fill: var(--clr-neutral-100);
+      fill: var(--clr-neutral-900);
     }
   }
 }
