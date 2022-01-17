@@ -847,7 +847,8 @@ main {
   background-color: var(--clr-neutral-100);
 }
 .choose-season.open .choose-season__content {
-  display: block;
+  transform: scaleY(1);
+  opacity: 1;
 }
 .choose-season button {
   display: flex;
@@ -873,7 +874,10 @@ main {
   font-weight: 400;
   color: var(--clr-neutral-900);
   border-radius: 0 0 5px 5px;
-  display: none;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: all 150ms ease-in-out;
 }
 .choose-season__content li {
   padding: 8px 0;
@@ -995,8 +999,7 @@ main {
 }
 @media only screen and (min-width: 992px) {
   .site-header__nav-wrapper .container {
-    margin-bottom: 0;
-    padding-inline: 0;
+    margin-bottom: 30px;
   }
 }
 

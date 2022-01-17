@@ -11,7 +11,8 @@
     background-color: var(--clr-neutral-100);
 
     .choose-season__content {
-      display: block;
+      transform: scaleY(1);
+      opacity: 1;
     }
   }
 
@@ -42,7 +43,10 @@
     color: var(--clr-neutral-900);
     border-radius: 0 0 5px 5px;
 
-    display: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
 
     li {
       padding: 8px 0;
