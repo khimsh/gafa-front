@@ -38,6 +38,10 @@ body {
 
     .section__title,
     .page-title {
+      &::after {
+        background-color: hsl(204 2% 59% / 0.26);
+      }
+
       span {
         background-color: #f4f5f6;
       }

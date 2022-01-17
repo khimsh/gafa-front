@@ -330,6 +330,10 @@ ul {
 body.gray {
   background-color: #f4f5f6;
 }
+body.gray .section__title::after,
+body.gray .page-title::after {
+  background-color: rgba(148, 151, 153, 0.26);
+}
 body.gray .section__title span,
 body.gray .page-title span {
   background-color: #f4f5f6;
