@@ -56,7 +56,7 @@
           <nav class="site-nav">
             <ul>
               <div>
-                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="index.html" class="active">მთავარი</a></li>
                 <li><a href="about.html">ლიგის შესახებ</a></li>
                 <li><a href="news.html">სიახლეები</a></li>
               </div>
@@ -72,13 +72,13 @@
             <img src="assets/images/gafa-logo.png" alt="" />
           </a>
 
-          <button class="nav-control-btn">
+          <button class="nav-control-btn" aria-label="open navigation">
             <svg>
               <use href="assets/images/icons/menu.svg#menu" />
             </svg>
           </button>
 
-          <button class="search-control-btn">
+          <button class="search-control-btn" aria-label="open search form">
             <svg>
               <use href="assets/images/icons/search.svg#search" />
             </svg>
@@ -86,14 +86,25 @@
 
           <div class="header-search-box">
             <form action="#">
-              <input type="search" name="search" id="search" placeholder="ძიება" />
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="ძიება"
+              />
 
-              <button type="submit">
+              <button type="submit" aria-label="search">
                 <svg>
                   <use href="assets/images/icons/search.svg#search" />
                 </svg>
               </button>
             </form>
+
+            <button class="header-search-box__close" aria-label="close search">
+              <svg>
+                <use href="assets/images/icons/times-solid.svg#close" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
