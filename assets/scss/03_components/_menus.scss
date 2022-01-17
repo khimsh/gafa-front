@@ -1,5 +1,7 @@
 .site-nav {
-  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
   overflow: hidden;
 
   position: absolute;
@@ -9,18 +11,20 @@
   width: 100%;
   background-color: var(--clr-secondary);
   z-index: 10;
-  transition: max-height 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &.active {
-    max-height: 1000px;
+    transform: scaleY(1);
+    opacity: 1;
   }
 
   @media only screen and (min-width: 1200px) {
-    max-height: unset;
     position: relative;
     background-color: unset;
     top: unset;
     left: unset;
+    transform: unset;
+    opacity: unset;
   }
 
   ul {
@@ -57,7 +61,7 @@
         height: 2px;
         width: 0%;
         background-color: var(--clr-primary);
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
 
       &:hover,

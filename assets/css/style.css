@@ -1315,7 +1315,9 @@ main {
 }
 
 .site-nav {
-  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
   overflow: hidden;
   position: absolute;
   top: 57px;
@@ -1323,18 +1325,20 @@ main {
   width: 100%;
   background-color: var(--clr-secondary);
   z-index: 10;
-  transition: max-height 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .site-nav.active {
-  max-height: 1000px;
+  transform: scaleY(1);
+  opacity: 1;
 }
 @media only screen and (min-width: 1200px) {
   .site-nav {
-    max-height: unset;
     position: relative;
     background-color: unset;
     top: unset;
     left: unset;
+    transform: unset;
+    opacity: unset;
   }
 }
 @media only screen and (min-width: 1200px) {
