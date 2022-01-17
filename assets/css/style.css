@@ -1006,6 +1006,12 @@ main {
     margin-bottom: 30px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .site-header__nav-wrapper .container {
+    margin-bottom: 0;
+    padding-inline: 0;
+  }
+}
 
 .top-bar {
   position: relative;
