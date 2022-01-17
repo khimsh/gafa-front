@@ -19,7 +19,7 @@
 
 .match {
   position: relative;
-  padding-block: 6px;
+  padding: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,8 +35,20 @@
 
   .team {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     align-items: center;
-    gap: 23px;
+    gap: 20px;
+
+    @media only screen and (min-width: 992px) {
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+
+    &:last-child {
+      justify-content: flex-start;
+      flex-direction: row;
+    }
 
     p {
       font-size: 18px;
@@ -44,32 +56,33 @@
     }
   }
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  .result {
+    width: 50px;
+    height: 44px;
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-heading);
+    font-size: 34px;
+    color: var(--clr-neutral-900);
+    background-color: #e9ebed;
   }
 
-  &__results {
-    display: flex;
+  &__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 6px;
 
-    & > div {
-      width: 50px;
-      height: 44px;
-      display: grid;
-      place-content: center;
-      font-family: var(--ff-heading);
-      font-size: 34px;
-      color: var(--clr-neutral-900);
-      background-color: #e9ebed;
+    @media only screen and (min-width: 992px) {
+      grid-template-columns: 1fr 1fr;
     }
   }
 
   &__info {
-    text-align: center;
+    text-align: left;
+    width: 100%;
 
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 680px) {
       text-align: right;
       position: absolute;
       right: 20px;

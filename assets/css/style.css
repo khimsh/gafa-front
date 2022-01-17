@@ -1254,7 +1254,7 @@ main {
 
 .match {
   position: relative;
-  padding-block: 6px;
+  padding: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1270,23 +1270,26 @@ main {
 }
 .match .team {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: center;
-  gap: 23px;
+  gap: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .match .team {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+}
+.match .team:last-child {
+  justify-content: flex-start;
+  flex-direction: row;
 }
 .match .team p {
   font-size: 18px;
   color: #464444;
 }
-.match__wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.match__results {
-  display: flex;
-  gap: 6px;
-}
-.match__results > div {
+.match .result {
   width: 50px;
   height: 44px;
   display: grid;
@@ -1296,10 +1299,22 @@ main {
   color: var(--clr-neutral-900);
   background-color: #e9ebed;
 }
-.match__info {
-  text-align: center;
+.match__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
 }
 @media only screen and (min-width: 992px) {
+  .match__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.match__info {
+  text-align: left;
+  width: 100%;
+}
+@media only screen and (min-width: 680px) {
   .match__info {
     text-align: right;
     position: absolute;
