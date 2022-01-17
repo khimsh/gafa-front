@@ -146,12 +146,13 @@ if (document.querySelector('.photo-gallery-modal')) {
   });
 
   // Open modal
-  document
-    .querySelector('[data-open-gallery]')
-    .addEventListener('click', () => {
-      galleryModal.classList.add('active');
-      console.log('clicked');
+  const openModalBtns = document.querySelectorAll('[data-open-gallery]');
+
+  openModalBtns.forEach((openModalBtn) => {
+    openModalBtn.addEventListener('click', () => {
+      galleryModal.classList.toggle('active');
     });
+  });
 
   function createImageTag(src, desc) {
     let image = document.createElement('img');
